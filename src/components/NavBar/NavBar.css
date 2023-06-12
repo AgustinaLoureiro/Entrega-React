@@ -1,0 +1,27 @@
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    font-family: "Dancing Script", cursive;
+    color: #fefbf4;
+    font-size: 70px;
+}
+
+h2{
+    font-family: "Amatic SC", coursive;
+    color: rgba(155, 96, 44, 0.5058823529);
+    font-size: 40px;
+    font-weight: 100;
+}
+
+li{
+    display: block;
+    background-color: #fdf4ed;
+    margin: 0;
+    padding: 10px;
+    list-style: none;
+    cursor: pointer;
+}
