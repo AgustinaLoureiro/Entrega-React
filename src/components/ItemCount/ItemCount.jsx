@@ -1,12 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import './ItemCount.css'
 
 const ItemCount = () => {
     const [contador, setContador] = useState(1);
-    useEffect( () => {
-      console.log(`Se ejecutó`)
-      document.title = `Contador: ${contador}`;
-    }, [contador])
     let stock = 10
     const incrementar = () => {
       if (contador < stock){
@@ -26,7 +22,7 @@ const ItemCount = () => {
         <button onClick={decrementar}> - </button>
         <p> Unidades: {contador} </p>
         <button onClick={incrementar}> + </button>
-        <button onClick={{agregarAlCarrito}}>Agregar al carrito</button>
+        <button onClick={agregarAlCarrito}>Agregar al carrito</button>
     </div>
   )
 }
