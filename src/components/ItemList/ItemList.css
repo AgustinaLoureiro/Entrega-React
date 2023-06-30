@@ -1,0 +1,4 @@
+.contenedorProductor{
+    display: flex;
+    flex-wrap: wrap;
+}
