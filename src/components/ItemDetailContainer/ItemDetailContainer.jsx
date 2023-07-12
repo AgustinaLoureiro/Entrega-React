@@ -1,16 +1,19 @@
 import {useState, useEffect} from 'react'
 import { getUnProducto } from '../../azyncmock'
 import ItemDetail from '../ItemDetail/ItemDetail'
+import { useParams } from 'react-router-dom'
 
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] = useState(null)
+    const [producto, setProducto] = useState(null);
+
+    const {idItem} = useParams();
 
     useEffect ( () =>{
-        getUnProducto(1)
-            .then(res => setProducto(res));
+        getUnProducto(idItem)
+          .then(res => setProducto(res));
+    }, [idItem])
 
-    }, [])
   return (
     <div>
       <ItemDetail {...producto} />
@@ -18,4 +21,4 @@ const ItemDetailContainer = () => {
   )
 }
 
-export default ItemDetailContainer
+export default ItemDetailContainer;
